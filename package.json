@@ -1,0 +1,31 @@
+{
+  "name": "api-functional-test-automation",
+  "version": "1.0.0",
+  "description": "Code repository for RAVN Code Challenge API Functional Test Automation",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha test/**/*.test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GSGranados/api-functional-test-automation.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/GSGranados/api-functional-test-automation/issues"
+  },
+  "homepage": "https://github.com/GSGranados/api-functional-test-automation#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.21.0",
+    "@babel/core": "^7.21.0",
+    "@babel/node": "^7.20.7",
+    "@babel/preset-env": "^7.20.2",
+    "@babel/register": "^7.21.0",
+    "@types/supertest": "^2.0.12",
+    "chai": "^4.3.7",
+    "mocha": "^10.2.0",
+    "supertest": "^6.3.3"
+  }
+}
