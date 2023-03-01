@@ -4,7 +4,8 @@
   "description": "Code repository for RAVN Code Challenge API Functional Test Automation",
   "main": "index.js",
   "scripts": {
-    "test": "mocha test/**/*.test.js"
+    "test": "mocha src/test/**/*.spec.js --timeout=15000",
+    "test:reporter": "mocha src/test/**/*.spec.js --timeout=15000 --reporter mochawesome --reporter-options reportDir=reports/"
   },
   "repository": {
     "type": "git",
@@ -21,11 +22,16 @@
     "@babel/cli": "^7.21.0",
     "@babel/core": "^7.21.0",
     "@babel/node": "^7.20.7",
+    "@babel/plugin-transform-runtime": "^7.21.0",
     "@babel/preset-env": "^7.20.2",
     "@babel/register": "^7.21.0",
+    "@types/chai": "^4.3.4",
+    "@types/mocha": "^10.0.1",
+    "@types/mochawesome": "^6.2.1",
     "@types/supertest": "^2.0.12",
     "chai": "^4.3.7",
     "mocha": "^10.2.0",
+    "mochawesome": "^7.1.3",
     "supertest": "^6.3.3"
   }
 }
