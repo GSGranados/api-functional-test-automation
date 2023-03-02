@@ -26,22 +26,22 @@ describe(`${initialTestId}: RAVN API Functional Test Automation`, () => {
         //Sending Request
         const response = await RestfulBookerController.searchBooking(bookingId);
         //Validate Status and Response body
-        await RestfulBookerController.verifyBookingCreated(response, newBooking);
+        await RestfulBookerController.verifyBookingFound(response, newBooking);
     });
     increment++;
 
-    it.skip(`${generateId(initialTestId, increment)}: Update Existing Booking Information with Restful Booker API - PUT/booking`, async () => {
+    it(`${generateId(initialTestId, increment)}: Update Existing Booking Information with Restful Booker API - PUT/booking`, async () => {
         testId = generateId(initialTestId, increment);
         newBooking.setAdditionalNeeds(constants.misc.additionalNeedsEdited);
         //Sending Request - Updating booking
         await RestfulBookerController.updateBooking(newBooking.serializeObject(), bookingId);
         //Validate Booking Updated
         const response = await RestfulBookerController.searchBooking(bookingId)
-        await RestfulBookerController.verifyBookingCreated(response, newBooking);
+        await RestfulBookerController.verifyBookingFound(response, newBooking);
     });
     increment++;
 
-    it.skip(`${generateId(initialTestId, increment)}: Delete Booking with Restful Booker API - DELETE/:id`, async () => {
+    it(`${generateId(initialTestId, increment)}: Delete Booking with Restful Booker API - DELETE/:id`, async () => {
         testId = generateId(initialTestId, increment);
         //Deleting Booking
         await RestfulBookerController.deleteBooking(bookingId);

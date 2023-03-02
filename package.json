@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "set TS_NODE_COMPILER_OPTIONS={\"module\": \"commonjs\" } & mocha src/test/**/*.spec.ts --timeout=15000",
-    "test:reporter": "set TS_NODE_COMPILER_OPTIONS={\"module\": \"commonjs\" } & mocha src/test/**/*.spec.ts --timeout=15000 --reporter mochawesome --reporter-options reportDir=reports/"
+    "test:reports": "set TS_NODE_COMPILER_OPTIONS={\"module\": \"commonjs\" } & mocha src/test/**/*.spec.ts --timeout=15000 --reporter mochawesome --reporter-options reportDir=reports/"
   },
   "repository": {
     "type": "git",
