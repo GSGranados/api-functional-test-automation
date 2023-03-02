@@ -1,13 +1,14 @@
-import constants from '../../data/constants.json'
 class Booking {
-    firstname;
-    lastname;
-    totalprice;
-    depositpaid;
-    bookingdates;
-    additionalneeds;
 
-    constructor(firstName, lastName, totalPrice, isDepositPaid, bookingDates, additionalNeeds) {
+
+    firstname: string;
+    lastname: string;
+    totalprice: number;
+    depositpaid: boolean;
+    bookingdates: { checkin: string, checkout: string };
+    additionalneeds: string;
+
+    constructor(firstName: string, lastName: string, totalPrice: number, isDepositPaid: boolean, bookingDates: { checkin: string, checkout: string }, additionalNeeds: string) {
         this.firstname = firstName;
         this.lastname = lastName;
         this.totalprice = totalPrice;
@@ -34,22 +35,22 @@ class Booking {
     getAdditionalNeeds() {
         return this.additionalneeds;
     }
-    setFirstName(firstName) {
+    setFirstName(firstName: string) {
         this.firstname = firstName;
     }
-    setLastName(lastName) {
+    setLastName(lastName: string) {
         this.lastname = lastName;
     }
-    setTotalPrice(totalPrice) {
+    setTotalPrice(totalPrice: number) {
         this.totalprice = totalPrice;
     }
-    setIsDespositPaid(isDepostiPaid) {
+    setIsDespositPaid(isDepostiPaid: boolean) {
         this.depositpaid = isDepostiPaid
     }
-    setBookingDates(bookingDates) {
+    setBookingDates(bookingDates: { checkin: string, checkout: string }) {
         this.bookingdates = bookingDates;
     }
-    setAdditionalNeeds(additionalNeeds) {
+    setAdditionalNeeds(additionalNeeds: string) {
         this.additionalneeds = additionalNeeds;
     }
 
