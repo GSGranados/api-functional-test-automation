@@ -15,14 +15,22 @@
     },
     "incorrectBookingData": {
         "bookingId": null,
-        "firstName": "Steven",
-        "lastName": "Granados",
-        "totalPrice": -150.10,
-        "isDepositPaid": "true",
-        "bookingDates": {
-            "checkout": "2023-01-01"
+        "booking": {
+            "firstname": "",
+            "lastname": "Granados",
+            "totalprice": 150.10,
+            "depositpaid": null,
+            "bookingdates": {
+                "checkin": "2022-01-01",
+                "checkout": "2023-01-01"
+            },
+            "additionalneeds": "Please, Include some extra towels in the Bathroom"
         },
-        "additionalNeeds": "Please, Include some extra towels in the Bathroom"
+        "incorrectBookingDates": {
+            "checkin": "2018-31-01",
+            "checkout": "2019-31-01"
+        },
+        "inexistentBookingId": 9999
     },
     "misc": {
         "additionalNeedsEdited": "Please, Include some extra towels in the Bathroom and one extra blanket"

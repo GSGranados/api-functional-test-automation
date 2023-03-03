@@ -4,8 +4,9 @@
   "description": "Code repository for RAVN Code Challenge API Functional Test Automation",
   "main": "index.js",
   "scripts": {
-    "test": "set TS_NODE_COMPILER_OPTIONS={\"module\": \"commonjs\" } & mocha src/test/**/*.spec.ts --timeout=15000",
-    "test:reports": "set TS_NODE_COMPILER_OPTIONS={\"module\": \"commonjs\" } & mocha src/test/**/*.spec.ts --timeout=15000 --reporter mochawesome --reporter-options reportDir=reports/"
+    "test:functional": "set TS_NODE_COMPILER_OPTIONS={\"module\": \"commonjs\" } & mocha src/test/restfulBooker.spec.ts --timeout=15000",
+    "test:negative": "set TS_NODE_COMPILER_OPTIONS={\"module\": \"commonjs\" } & mocha src/test/restfulBooker.negative.spec.ts --timeout=15000",
+    "test:all": "set TS_NODE_COMPILER_OPTIONS={\"module\": \"commonjs\" } & mocha src/test/**/*.spec.ts --timeout=15000 --reporter mochawesome --reporter-options reportDir=reports/"
   },
   "repository": {
     "type": "git",

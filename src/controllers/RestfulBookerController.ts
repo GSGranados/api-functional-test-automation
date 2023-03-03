@@ -31,6 +31,18 @@ class RestfulBookerController {
         expect(response.body.booking).to.deep.include(bookingData);
     }
 
+    async verifyFailedBookingCreatedResponse(response: any, bookingData: Booking) {
+        expect(response.statusCode).to.be.eq(200);
+        expect(response.body).to.not.be.null;
+        expect(response.body.booking).to.not.deep.include(bookingData);
+    }
+
+
+    async verifyBookingCreatedError(response: any) {
+        expect(response.statusCode).to.be.eq(500);
+        expect(response.body).to.be.empty;
+    }
+
     /**
      * @function verifyBookingFound It makes some Chai assertions to validate the existence of a Booking record after executing a GET Request
      * @param response the response from the API Request
@@ -40,6 +52,11 @@ class RestfulBookerController {
         expect(response.statusCode).to.be.eq(200);
         expect(response.body).to.not.be.null;
         expect(response.body).to.deep.include(bookingData);
+    }
+
+    async verifyBookingNotFound(response: any) {
+        expect(response.statusCode).to.be.eq(404);
+        expect(response.body).to.be.empty;
     }
 
     /**
