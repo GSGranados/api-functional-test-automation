@@ -23,7 +23,7 @@ $ npm i
 
 -It will install all dependencies needed to run the project. Then, run the "test:all" script
 
-$ npm run test:all -- it will run all feature files (including negative spec)
+$ npm run test:all -- it will run all spec files (including negative spec)
 
 ```
 
