@@ -30,7 +30,7 @@
             "checkin": "2018-31-01",
             "checkout": "2019-31-01"
         },
-        "inexistentBookingId": 9999
+        "inexistentBookingId": 9999999
     },
     "misc": {
         "additionalNeedsEdited": "Please, Include some extra towels in the Bathroom and one extra blanket"

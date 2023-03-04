@@ -3,12 +3,12 @@ class Booking {
 
     firstname?: string;
     lastname?: string;
-    totalprice?: number | undefined;
+    totalprice?: number;
     depositpaid?: boolean | null;
     bookingdates?: { checkin: string, checkout: string };
     additionalneeds?: string;
 
-    constructor(firstName: string, lastName: string, totalPrice: number | undefined, isDepositPaid: boolean | null, bookingDates: { checkin: string, checkout: string }, additionalNeeds: string) {
+    constructor(firstName: string, lastName: string, totalPrice: number, isDepositPaid: boolean | null, bookingDates: { checkin: string, checkout: string }, additionalNeeds: string) {
         this.firstname = firstName;
         this.lastname = lastName;
         this.totalprice = totalPrice;
@@ -41,7 +41,7 @@ class Booking {
     setLastName(lastName: string) {
         this.lastname = lastName;
     }
-    setTotalPrice(totalPrice: number | undefined) {
+    setTotalPrice(totalPrice: number) {
         this.totalprice = totalPrice;
     }
     setIsDespositPaid(isDepostiPaid: boolean | null) {
