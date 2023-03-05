@@ -31,6 +31,12 @@ class RestfulBookerController {
         expect(response.body.booking).to.deep.include(bookingData);
     }
 
+    /**
+     * @function verifyFailedBookingCreatedResponse It makes a Chai assertion to verify the equality of the Response obtained from the API and the 
+     * Booking object sent with INCORRECT data
+     * @param response The response obtained from the API
+     * @param bookingData the Booking data to validate the response
+     */
     async verifyFailedBookingCreatedResponse(response: any, bookingData: Booking) {
         expect(response.statusCode).to.be.eq(200);
         expect(response.body).to.not.be.null;
@@ -38,6 +44,10 @@ class RestfulBookerController {
     }
 
 
+    /**
+     * @function verifyBookingCreatedError It makes a Chai assertion to validate the status code of the response and its body, both being empty and 500
+     * @param response The response object to verify
+     */
     async verifyBookingCreatedError(response: any) {
         expect(response.statusCode).to.be.eq(500);
         expect(response.body).to.be.empty;
